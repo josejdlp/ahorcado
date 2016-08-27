@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Juego del ahoracado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="codigo.js"></script>
+    </head>
+    <body>
+        <h1>Adivinando letra a letra, vocabulario de animales</h1>
+        <canvas id="c"></canvas>
+        <div>
+            <p>Elige una letra: 
+            <input type="text" id="letra" onkeypress="pulsaEnter(event)"/>
+            <input type="button" id="boton" value="Probar"/>
+            </p>
+            <p>Letras falladas: 
+                <label id="fallos"/>
+            
+            </p>
+            <h2 id="pista"></h2> 
+        </div>
+        <script type="text/javascript">
+            iniciar();
+        </script>
+    </body>
+</html>
+<!--
+1 dibujar el poste
+2 determianr la palabra
+3 pasos para ahorcar:
+    cabeza
+    torso
+    brazos
+    pies
+    ojos muertos
+4 elegir las letras
+    si la letra existe
+        pongo en la lista
+    si no existe
+        agrego un trazo al ahorcado
+    si ya dibuje al ahorcado completo
+        perdi
+    si adivine la palabra
+        gane
+-->
